@@ -3,6 +3,7 @@ import React from 'react';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
+import { Loader } from './Loader/Loader';
 import { useEffect } from 'react';
 import { selectIsLoading,selectError } from './redux/selectors';
 import { useDispatch } from 'react-redux';
@@ -38,7 +39,7 @@ export const App = () => {
 
       <h2> Contacts </h2>
       <Filter />
-      {isLoading && !error && <b>Request in progress.....</b>}
+      {isLoading && !error && <Loader/>}
       <ContactList
       />
     </div>
