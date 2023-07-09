@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 
 import { useSelector } from 'react-redux';
 import { fetchContacts } from './redux/operations';
+import  css from './App.module.css'
 
 export const App = () => {
   
@@ -23,7 +24,7 @@ export const App = () => {
 
 
   return (
-    <div
+    <div className={css.app}
       style={{
         height: '100vh',
         display: 'flex',
